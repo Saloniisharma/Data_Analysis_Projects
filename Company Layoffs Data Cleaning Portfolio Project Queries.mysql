@@ -32,7 +32,11 @@ WHERE row_num > 1;
 SELECT *
 FROM layoffs_staging_2;
 
+
+
+
 -- standardizing data
+
 -- 1) Column "company" Standardization
 
 SELECT company,TRIM(company)
@@ -40,6 +44,8 @@ FROM layoffs_staging_2;
 
 UPDATE layoffs_staging_2
 SET company = TRIM(company);
+
+
 
 -- 2) Column "industry" Standardization
 
@@ -59,6 +65,8 @@ SELECT DISTINCT location
 FROM layoffs_staging_2
 order by 1;
 
+
+
 -- 1) Column "country" Standardization
 
 SELECT DISTINCT country
@@ -73,6 +81,10 @@ UPDATE layoffs_staging_2
 SET country = TRIM(TRAILING '.' FROM country)
 WHERE country LIKE 'United States%';
 
+
+
+
+
 -- Changing Data Type of "date" column
 
 SELECT `date`,
@@ -84,6 +96,10 @@ SET `date` = STR_TO_DATE(`date`,'%m/%d/%Y');
 
 ALTER TABLE layoffs_staging_2
 MODIFY COLUMN `date` DATE;
+
+
+
+
 
 -- delete nulls and blanks
 
@@ -97,7 +113,10 @@ from layoffs_staging_2
 WHERE industry IS NULL
 OR industry = '';
 
--- we gonna try to populate these
+
+
+
+-- we gonna try to populate null values for industry column
 
 SELECT * 
 FROM layoffs_staging_2
@@ -149,6 +168,9 @@ DROP COLUMN row_num;
 
 SELECT *
 from layoffs_staging_2;
+
+
+
 
 -- exploratary analysis
 
