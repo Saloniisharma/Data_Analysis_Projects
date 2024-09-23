@@ -1,11 +1,5 @@
 - 👋 Hi, I’m @Saloniisharma
-- 👀 I’m interested in Development Sector
-- 🌱 I’m currently learning Data analysis
-- 💞️ I’m looking to collaborate on different Data Analysis Projects
-- 📫 How to reach me www.linkedin.com/in/
-saloniisharma
-- 😄 Pronouns: She
-- ⚡ Fun fact: I am someone who started preparing for government exams in India and realized that "Aur bhi bhut kuch h duniya m krne ko"
+- 👀 Here, You will find the MYSQL Projects code I built. Please Review them and give feedback.
 
 <!---
 Saloniisharma/Saloniisharma is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
